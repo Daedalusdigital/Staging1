@@ -48,7 +48,7 @@
 	<!-- Lightcase ( image popup preview ) -->
 	<link href="plugins/lightcase/css/lightcase.css" rel="stylesheet" type="text/css" />
 </head>
-<body class="hidenav removebullets">
+<body class="hidenav removebullets" id="home">
 
 <!-- start preloader -->
 <div id="preloader">
@@ -57,7 +57,7 @@
 <!-- end preloader -->
 
 <!-- THEMES PREVIEW -->
-<div id="tm-fullscreen" class="fixed bg111 wfull hfull z900"></div>
+<div id="tm-fullscreen" class="fixed bg111 wfull hfull z900" ></div>
 <div class="tm-prev">
 	<div class="bg111 text-center fontproximabold clight size10 caps pt5">Clients</div>
 	<div class="tm-content">
@@ -182,10 +182,10 @@
 
 
 <!-- Navigation -->
-	<div class="navigation">
+	<div class="navigation" >
 
 		<div class="container">
-			<div class="logo"><a href="index.php"><img src="images/spacer.png" class="white mt5 relative z100" alt=""/></a></div>
+			<div class="logo"><a href="#"><img src="images/spacer.png" class="white mt5 relative z100" alt=""/></a></div>
 			
 					
 <div class="navbar navbar-default" role="navigation">
@@ -212,50 +212,24 @@
 		<div class="mainmenu mobanim dark-menu navbar-collapse white collapse offset-0 ">
 			<ul class="nav navbar-nav mobpad">
 
-				<li><a href="Home.php">Home</a></li>
-				<li><a href="About.php">About</a></li>
-				<li><a href="Services.php">Services</a></li>
-				<li><a href="Prices.php">Prices</a></li>
-				<li><a href="Portfolio.php">Portfolio</a></li>
-				<li><a href="contact.php">Contact</a></li>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#team">Team</a></li>
+			<!--<li><a href="#">Prices</a></li> -->
+				<li><a href="#portfolio">Portfolio</a></li>
+				<li><a href="#clients">Clients</a></li>
+				<li><a href="#contactus">Contact</a></li>
 			</ul>
 		</div>
-	
-		<!-- shop/search -->
-		<div class="shopsearch navbar-collapse white collapsee offset-0 relative z1000">
+	<!-- shop/search -->
+	<div class="shopsearch navbar-collapse white collapsee offset-0 relative z1000">
 			<ul class="nav navbar-nav navbar-right">
 				<li>
 					<div class="clearfix"></div>
 				</li>
 				<li class="dropdown basket basket-white"> 
-				  <a data-toggle="dropdown" class="dropdown-toggle" href="#"> <i class="ti-bag"></i><span class="active">1</span></a>
-				  <ul class="cart dropdown-menu">
-					<!-- <li class="transparent"><span class="cartip"></span></li> -->
-
-					<li class="itmhide">
-						<p class="size15 bold caps clightgrey">cart content</p>
-						<div class="cartimage left">
-							<a href="#"><img src="images/noimage.jpg" alt=""/></a>
-						</div>
-						<p class="price">$99.00</p>
-						<a href="#" class="title">Halogen® Sleeve Sweater</a>
-						<p class="quantity">Qty: 1</p>
-						<button type="button" class="close mt-30" data-dismiss="alert" aria-hidden="true">&times;</button>
-						<button type="button"  class="close mt-30">&times;</button>
-					</li>
-					<li class="itmhide2">
-						<div class="noitems text-center none">There are no items in cart</div>
-						<div class="total">
-							<p class="left size15 bold caps clightgrey">Total:</p>
-							<p class="totalprice right">$99.00</p>
-							<div class="clearfix"></div>
-							<button class="btn cartbtn btn-default caps  left" type="submit">view cart</button>
-							<button class="btn cartbtn btn-default caps  right" type="submit">checkout</button>
-							<div class="clearfix"></div>
-						</div>
-					</li>
-					
-				  </ul>
+				  <a data-toggle="dropdown" class="dropdown-toggle" style="background-color:rgba(0, 0, 0, 0.4);color:white" href="#">icarus</a>
 				</li>
 				<li class="search"><a href="#" class="srclick flip"><i class="ti-search"></i></a></li>
 			</ul>
@@ -374,7 +348,9 @@
 					data-xs="0"
 					data-xe="0"
 					>
-					<span class="ti-mouse size30 cwhite"></span>
+					<a href="#godown">
+						<span class="ti-mouse size30 cwhite"></span>
+					</a>
 					</div>
 				</div>	
 
@@ -467,7 +443,15 @@
 					data-xs="0"
 					data-xe="0"
 					>
-					<span class="ti-mouse size30 cwhite"></span>
+
+					<div class="mobpad">
+						<ul>
+							<li>
+								<a href="#godown"><span class="ti-mouse size30 cwhite" ></span></a>
+							</li>
+						</ul>
+					</div>
+					
 					</div>
 				</div>
 			</li>
@@ -478,47 +462,30 @@
 </div>
 <!-- END REVOLUTION SLIDER -->
 
-<!-- 4 COLS -->
-<div class="bgwhite bordertopbottom relative z100">
-	<div class="container">
-		<ul class="squares">
-			<li class="col-md-3 text-center">
-				<a href="#">
-					<i class="ti-palette size40"></i>
-					<h4 class="uppercase titlefont">Design</h4>
-					<p>Nice colors, great balance, sharp details.</p>
-				</a>
-			</li>
-			<li class="col-md-3 text-center">
-				<a href="#">
-					<i class="icon-globe size40"></i>
-					<h4 class="uppercase titlefont">Web Development</h4>
-					<p>The Page builder will make your work a lot easyer</p>
-				</a>
-			</li>
-			<li class="col-md-3 text-center">
-				<a href="#">
-					<i class="icon-mobile-3 size40"></i>
-					<h4 class="uppercase titlefont">Mobile App Development</h4>
-					<p>Your site will look flawless on any device.</p>
-				</a>
-			</li>
-			<li class="col-md-3 text-center">
-				<a href="#">
-					<i class="ti-camera size40"></i>
-					<h4 class="uppercase titlefont">Photography</h4>
-					<p>If you stare to much it will not hurt your eyes.</p>
-				</a>
-			</li>
-		</ul>
+<!-- Who we are -->
+<div class="bgwhite bordertopbottom relative z100" >
+	<div class="container" id="godown">
+		<div class="container sspacing-title-button">
+				
+				<h3 class="text-center caps pb20 titlefont">WHO ARE WE ?</h3>
+				
+				<div class="ctnr">
+					
+					<p>We are Daedalus Digital, a Software Development and Media Company. 
+					  We are driven by changing the perception around the advancement of technology within small and emerging entities.
+					Daedalus is committed to offering exceptional and quality services best to suit the demands of our clients
+					while flying the flag of innovation,transformation and dedication high.
+					We help companies and start-ups from all over the world materialize their ideas into great projects…</p>
+				</div><div class="clearfix"></div>
+		</div>
 	</div>
 </div>
-<!-- End of 4 Cols -->
+<!-- End of Who we are -->
 
 <!-- Section tabs and menu -->
-<section class="bg222 c999 relative z100 clearfix">
+<section class="bg222 c999 relative z100 clearfix" >
 	<div class="cover1 col-xs-12 col-sm-12 col-md-6 h700" >&nbsp;</div>
-	<div class="container cus-pos-abs">
+	<div class="container cus-pos-abs" id="about">
 		<div class="clearfix"></div>
 		<div class="cover-right-text col-sm-12 col-sm-offset-0 col-md-6 col-md-offset-6 sspacing">
 			<h1 class="titlefont cwhite">What we offer you</h1>
@@ -567,10 +534,12 @@
 <!-- End tabs and menu -->
 
 <!-- SECTION SERVICES -->
-<div class="">
+<div class="" id="services">
 	<div class="container sspacing">
+			<h1 class="text-center caps pb30 titlefont">Services</h1>
 		<div class="row">
-			<ul class="services">
+			<ul class="services" >
+					
 				<li class="col-md-4 col-sm-6 col-xs-12 text-center">
 					<a>
 						<i class="icon-star-2 size50 lh50 clightgrey"></i>
@@ -616,17 +585,17 @@
 			</ul>	
 		</div>
 	</div>
+
 </div>
 <!-- END OF SECTION SERVICES -->
+<div id="team" style="margin-top:-50px" class="separator33" data-scroll-reveal="enter top over 1s and move 30px after 0.5s"></div>
 
-<
-<!-- END OF SECTION IMAGE -->
-
+<div  style="padding:10px"></div>
 <!-- THE TEAM SECTION -->
-<div class="teamsection bgwhite relative z100 sspacing-title-button owhidden">
-	<div class="container">
+<div class="teamsection bgwhite relative z100 sspacing-title-button owhidden" >
+	<div class="container" >
 		<div class="row">
-			<h3 class="text-center caps pb30 titlefont">The team</h3>	
+			<h3 style="margin-top:-100px" class="text-center caps pb30 titlefont">The Team</h3>	
 			<div class="col-md-3" data-scroll-reveal="enter left over 1s and move 300px after 0.5s">
 				<div class="player offset-0" data-scrollreveal="enter left">
 					<h4 class="m15">Welcome Malamlela</h4>
@@ -700,10 +669,9 @@
 				</div>		
 			</div>
 			
-			<div class="clearfix"></div>
-			<div class="separator33" data-scroll-reveal="enter top over 1s and move 30px after 0.5s"></div>
-			
-			<div class="col-md-8" data-scroll-reveal="enter bottom over 1s and move 30px after 0.5s">
+			<div class="clearfix" style="padding-bottom:110px"></div>
+
+			<div  class="col-md-8"  data-scroll-reveal="enter bottom over 1s and move 30px after 0.5s">
 			
 				<ul class="aboutteamlist">
 					<li>
@@ -765,15 +733,16 @@
 			</div>		
 			
 			<div class="clearfix"></div>		
-			<p class="text-center caps"><a href="#" class="btn btnwhitehuge btn-default">Join our team</a></p>
+			
 		</div>
 	</div>
 </div>
-<!-- END OF TEAM SECTION -->
 
+<!-- END OF TEAM SECTION -->
+<div id="portfolio" style="padding:20px;margin-top:-80px" ></div>
 <!-- SECTION PORTFOLIO CAROUSEL-->
 <div class="bg222 relative z100 pt50">
-	<div class=" text-center">
+	<div class=" text-center" >
 		<h3 class="titlefont text-center caps pb20 cwhite">The Work</h3>
 
 		<!-- CarouFredSel 4 -->
@@ -913,7 +882,10 @@
 			</div>
 
 			<div class="clearfix"></div>
-			<div class="separator33 mt10"></div>
+			<div style="padding: 10px;"></div>
+			<div  class="separator33 mt10"></div>
+			
+			<div style="padding: 20px;"></div>
 			
 			<div class="col-md-3" data-scroll-reveal="enter top over 1s and move 0px after 0.2s">
 				<div class="circlesmall left"><i class="icon-child"></i></div>
@@ -983,8 +955,38 @@
 	</div>
 </section>
 <!-- End of FACTS SECTION-->
-
-<div class="separator100"></div>
+<!-- SECTION PARTNERS -->
+<div class="sspacing-title" id="clients">
+		<div class="container text-center">
+			<h3 class="text-center caps titlefont pb10">Clients</h3>
+	
+			<!-- CarouFredSel 4 -->
+			<div class="list_carousel4 responsive">
+				<ul id="foo4">
+					<li><img src="images/logos/logo1.jpg" alt=""/></li>
+					<li><img src="images/logos/logo2.jpg" alt=""/></li>
+					<li><img src="images/logos/logo3.jpg" alt=""/></li>
+					<li><img src="images/logos/logo4.jpg" alt=""/></li>
+					<li><img src="images/logos/logo5.jpg" alt=""/></li>
+					<li><img src="images/logos/logo6.jpg" alt=""/></li>
+					<li><img src="images/logos/logo7.jpg" alt=""/></li>
+				</ul>
+				<div class="clearfix"></div>
+				
+				<!--
+				//This enables more scrolling options and timer
+				<div class="timer4"></div>
+				<a id="prev4" href="" class="">&#60;</a>
+				<a id="next4" href="" class="">&#62;</a>
+				<div class="pager4"></div>
+				-->
+			</div>
+			<!-- End of CarouFredSel 4 -->
+			
+		</div>
+	</div>
+	<!-- End of Section -->
+<div class="separator100" id="contactus"></div>
 
 <!-- SECTION CONTACT -->
 <div class="">
@@ -1011,37 +1013,7 @@
 
 <div class="separator100"></div>
 
-<!-- SECTION PARTNERS -->
-<div class="sspacing-title">
-	<div class="container text-center">
-		<h3 class="text-center caps titlefont pb10">Partners</h3>
 
-		<!-- CarouFredSel 4 -->
-		<div class="list_carousel4 responsive">
-			<ul id="foo4">
-				<li><img src="images/logos/logo1.jpg" alt=""/></li>
-				<li><img src="images/logos/logo2.jpg" alt=""/></li>
-				<li><img src="images/logos/logo3.jpg" alt=""/></li>
-				<li><img src="images/logos/logo4.jpg" alt=""/></li>
-				<li><img src="images/logos/logo5.jpg" alt=""/></li>
-				<li><img src="images/logos/logo6.jpg" alt=""/></li>
-				<li><img src="images/logos/logo7.jpg" alt=""/></li>
-			</ul>
-			<div class="clearfix"></div>
-			
-			<!--
-			//This enables more scrolling options and timer
-			<div class="timer4"></div>
-			<a id="prev4" href="" class="">&#60;</a>
-			<a id="next4" href="" class="">&#62;</a>
-			<div class="pager4"></div>
-			-->
-		</div>
-		<!-- End of CarouFredSel 4 -->
-		
-	</div>
-</div>
-<!-- End of Section -->
 
 <!-- ADDRESS SECTION -->
 <section ID="sectionaddress-c" class="">
@@ -1196,5 +1168,16 @@
 <script type="text/javascript" src="js/modernizr.js"></script>
 <script type="text/javascript" src="js/page22.js"></script>
 
+<script>
+var slectedA = "";
+          $('.mobpad li a').click(function(){
+            slectedA = $(this).attr('href');
+
+            $('html,body').animate({
+                scrollTop: $(slectedA).offset().top
+            },1000);
+        });
+
+</script>
 </body>
 </html>
