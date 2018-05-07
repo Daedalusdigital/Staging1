@@ -56,13 +56,13 @@
 			@property until {Date|number|string} The date/time to count down to, or number of seconds
 						offset from now, or string of amounts and units for offset(s) from now:
 						'Y' years, 'O' months, 'W' weeks, 'D' days, 'H' hours, 'M' minutes, 'S' seconds.
-			@example until: new Date(2013, 12-1, 25, 13, 30)
+			@example until: new Date(2018, 4-1, 25, 13, 30)
  until: +300
  until: '+1O -2D'
 			@property [since] {Date|number|string} The date/time to count up from, or
 						number of seconds offset from now, or string for unit offset(s):
 						'Y' years, 'O' months, 'W' weeks, 'D' days, 'H' hours, 'M' minutes, 'S' seconds.
-			@example since: new Date(2013, 1-1, 1)
+			@example since: new Date(2018, 1-1, 1)
  since: -300
  since: '-1O +2D'
 			@property [timezone=null] {number} The timezone (hours or minutes from GMT) for the target times,
@@ -219,8 +219,8 @@
 			@param [secs] {number} The second (omit if <code>year</code> is a <code>Date</code>).
 			@param [ms] {number} The millisecond (omit if <code>year</code> is a <code>Date</code>).
 			@return {Date} The equivalent UTC date/time.
-			@example $.countdown.UTCDate(+10, 2013, 12-1, 25, 12, 0)
- $.countdown.UTCDate(-7, new Date(2013, 12-1, 25, 12, 0)) */
+			@example $.countdown.UTCDate(+10, 2018, 4-1, 25, 12, 0)
+ $.countdown.UTCDate(-7, new Date(2018, 4-1, 25, 12, 0)) */
 		UTCDate: function(tz, year, month, day, hours, mins, secs, ms) {
 			if (typeof year == 'object' && year.constructor == Date) {
 				ms = year.getMilliseconds();
@@ -253,39 +253,7 @@
 				periods[3] * 86400 + periods[4] * 3600 + periods[5] * 60 + periods[6];
 		},
 
-		/** Resynchronise the countdowns with the server.
-			@example $.countdown.resync() */
-		resync: function() {
-			var self = this;
-			$('.' + this._getMarker()).each(function() { // Each countdown
-				var inst = $.data(this, self.name);
-				if (inst.options.serverSync) { // If synced
-					var serverSync = null;
-					for (var i = 0; i < self._serverSyncs.length; i++) {
-						if (self._serverSyncs[i][0] == inst.options.serverSync) { // Find sync details
-							serverSync = self._serverSyncs[i];
-							break;
-						}
-					}
-					if (serverSync[2] == null) { // Recalculate if missing
-						var serverResult = ($.isFunction(inst.options.serverSync) ?
-							inst.options.serverSync.apply(this, []) : null);
-						serverSync[2] =
-							(serverResult ? new Date().getTime() - serverResult.getTime() : 0) - serverSync[1];
-					}
-					if (inst._since) { // Apply difference
-						inst._since.setMilliseconds(inst._since.getMilliseconds() + serverSync[2]);
-					}
-					inst._until.setMilliseconds(inst._until.getMilliseconds() + serverSync[2]);
-				}
-			});
-			for (var i = 0; i < self._serverSyncs.length; i++) { // Update sync details
-				if (self._serverSyncs[i][2] != null) {
-					self._serverSyncs[i][1] += self._serverSyncs[i][2];
-					delete self._serverSyncs[i][2];
-				}
-			}
-		},
+		
 
 		_instSettings: function(elem, options) {
 			return {_periods: [0, 0, 0, 0, 0, 0, 0]};
