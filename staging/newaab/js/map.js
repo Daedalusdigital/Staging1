@@ -1,8 +1,8 @@
 function initMap() {
 
     var map = new google.maps.Map(document.getElementById('ieatmaps'), {
-      center: {lat: 34.0937458, lng: -118.3614978},
-      zoom: 12,
+        center: { lat: -29.8150579, lng: 30.8593054},
+      zoom: 17,
       styles: [
             {
                 "featureType": "water",
