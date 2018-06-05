@@ -109,10 +109,10 @@ Image credits: unsplash.com
   background-image: url(../images/mainbanner01.jpg); 
 }
 .fade-carousel .slides .slide-2 {
-  background-image: url(../images/mainbanner02.jpg);
+  background-image: url(../images/mainbanner03.jpg);
 }
 .fade-carousel .slides .slide-3 {
-  background-image: url(../images/mainbanner03.jpg);
+  background-image: url(../images/mainbanner02.jpg);
 } 
   .fade-carousel .slides .slide-4 {
   background-image: url(../images/mainbanner04.jpg);
